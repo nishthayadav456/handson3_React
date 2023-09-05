@@ -27,6 +27,23 @@ class FormClass extends Component{
             Department:this.state.Department,
             rate:this.state.Rating
         }
+        if(newObj.name.length<=6){
+            this.state.sdata.push(newObj)
+            this.setState({
+                data:this.state.sdata
+            })
+            this.setState({
+                sdata:this.state.sdata,
+                Name:" ",
+                Department:" ",
+                Rating:" "
+            })
+        }
+
+        else{
+            alert ("Form not submitted")
+        }
+        
         this.state.EmpData.push(newObj);
         this.setState({
             EmpData:this.state.EmpData,
