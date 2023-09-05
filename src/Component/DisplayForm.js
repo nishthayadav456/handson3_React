@@ -21,6 +21,7 @@ class DisplayForm extends Component{
             })
 
             }
+            
             </div>
             <div className="con">
             <button onClick={this.props.toggleFunc}>Go Back</button>
