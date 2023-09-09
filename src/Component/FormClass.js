@@ -21,35 +21,22 @@ class FormClass extends Component{
     toogleFunction=()=>{
         this.setState({clicked: !this.state.clicked})
     }
-    clickHandle=()=>{
-        const newObj={
+    
+   clickHandle=(e)=>{
+     const newObj={
             name:this.state.Name,
             Department:this.state.Department,
             rate:this.state.Rating
-        }
-        if(newObj.name.length<7){
-            this.state.sdata.push(newObj)
-            this.setState({
-                data:this.state.sdata
-            })
-            this.setState({
-                sdata:this.state.sdata,
-                Name:"",
-                Department:"",
-                Rating:""
-            })
-        }
+        };
 
-        else{
-            alert ("Form not submitted")
-        }
         
         this.state.EmpData.push(newObj);
+    
         this.setState({
             EmpData:this.state.EmpData,
-            Name:" " ,
-            Department: " ",
-            Rating:" ",
+            Name:"" ,
+            Department: "",
+            Rating:"",
             clicked:false
         })
         console.log(this.state.EmpData)
